@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Producto } from '../../model/producto.model';
 import { CarritoService } from '../../servicios/carrito.service';
@@ -16,11 +15,11 @@ export class ProductosComponent {
   Productos : Producto[] = [
     {
       id : 1,
-      nombre: '',
-      descripcion:'',
+      nombre: 'Hola',
+      descripcion:'Mundo',
       precio:29,
-      imagen:'',
-      disponiblilidad:true
+      imagen:'https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2212291957.jpg?c=16x9&q=h_833,w_1480,c_fill',
+      disponibilidad:true
     }
   ]
   constructor(private carritoService: CarritoService){}
