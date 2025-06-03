@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 import { CarritoService } from '../../servicios/carrito.service';
 import { Producto } from '../../model/producto.model';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -27,4 +28,9 @@ ngOnInit(): void {
 onCarritoClick(){
   console.log('Carrito clicked')
 }
+
+
+
+
+
 }
