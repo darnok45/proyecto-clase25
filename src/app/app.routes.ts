@@ -8,19 +8,19 @@ import { OfertasComponent } from './paginas/ofertas/ofertas.component';
 import { CompraComponent } from './paginas/compra/compra.component';
 
 export const routes: Routes = [
-    {path: '', redirectTo:'/inicio', pathMatch:'full'},
+    { path: '', redirectTo: '/inicio', pathMatch: 'full' },
 
-    {path:'inicio',component:HomeComponent},
+    { path: 'inicio', component: HomeComponent },
 
-    {path:'Contacto',component:ContactoComponent},
+    { path: 'Contacto', component: ContactoComponent },
 
-    {path: 'producto',component:ProductosComponent},
+    { path: 'producto', component: ProductosComponent },
 
-    {path: 'carrito',component:CarritoComponent},
+    { path: 'carrito', component: CarritoComponent },
 
-    {path: 'quienes-somos',component:QuienessomosComponent},
+    { path: 'quienes-somos', component: QuienessomosComponent },
 
-    {path:'ofertas',component:OfertasComponent},
+    { path: 'ofertas', component: OfertasComponent },
 
-    {path: 'compra',component:CompraComponent}
+    { path: 'compra', component: CompraComponent }
 ];

@@ -84,7 +84,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="metodoPago" class=" form-label fw-semibold">Metdo de Pagp <span class="text-danger">*</span></label>
+            <label for="metodoPago" class=" form-label fw-semibold">Metdo de Pago <span class="text-danger">*</span></label>
             <select id="metodoPago" formControlName ="metodoPago" class="form-select">
                 <option value="" disabled selected>Seleccione metodo de pago</option>
                 <option value="tarjeta">Tarjeta de Credito/Debito</option>
@@ -98,11 +98,52 @@
         </div>
         <div class="d-flex justify-content-between align-items-center my-4">
             <div>
-                <p>Envio: ${{envio.tofixed(2)}}</p>
+                <p>Envio: ${{envio.toFixed(2)}}</p>
                 <p><strong>Total a Pagar : ${{calcularTotal() | number: '1.2-2'}}</strong></p>
             </div>
             <button type="submit" class="btn btn-primary">Finalizar Compra</button>
-        </div>
-
+        </div>  
     </div>
 </form>
+
+<!-- Modal PDF -->
+<div
+  *ngIf="mostrarModal"
+  class="modal show d-block"
+  tabindex="-1"
+  role="dialog"
+  style="background: rgba(0, 0, 0, 0.5);"
+>
+  <div
+    class="modal-dialog modal-xl"
+    role="document"
+    style="max-width: 90vw; max-height: 90vh;"
+  >
+    <div class="modal-content" style="height: 90vh;">
+      <div class="modal-header">
+        <h5 class="modal-title">Factura PDF</h5>
+        <button
+          type="button"
+          class="btn-close"
+          aria-label="Cerrar"
+          (click)="cerrarModal()"
+        ></button>
+      </div>
+      <div class="modal-body p-0" style="height: 80vh;">
+        <iframe
+          *ngIf="pdfSrc"
+          [src]="pdfSrc"
+          id="pdfFrame"
+          style="width: 100%; height: 100%; border: none;"
+        ></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="imprimirPDF()">
+          Imprimir
+        </button>
+        <button type="button" class="btn btn-secondary" (click)="cerrarModal()">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
