@@ -48,6 +48,13 @@
           </span>
         </a>
       </li>
+      <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/favorito']">
+            <i class="bi bi-heart-fill text-danger"></i>
+          </a>
+      </li>
     </div>
   </div>
+  <label for="toggle" id="label_toggle"><i class="fa-solid fa-moon"></i></label>
+  <input type="checkbox" id="toggle"(click)="cambiarFondo()">
 </nav>

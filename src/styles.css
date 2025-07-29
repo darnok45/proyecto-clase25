@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+/*Estilos Para modo oscuro*/
+body{
+    transition: all 1.5s ease;
+}
+#toggle{
+    display: none;
+}
+#label_toggle{
+    position: static;
+    cursor: pointer;
+}
+
+.dark{
+    background-color: black;
+    color: white;
+    transition: all 1.5s ease;
+}
